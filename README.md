@@ -18,6 +18,7 @@ Serve from the current folder and open (browse to) the default file (usually ind
 
 `lite-server --verbose`
 
+## Options
 
 ### port
 Sets the port to serve. Defaults to 3000.
