@@ -44,6 +44,6 @@ Folder (or collection of folders) to serve. Defaults to `./`. Use this when you 
 
 or to serve from multiple folders
 
-`lite-server --baseDir ./src --baseDir ./``
+`lite-server --baseDir ./src --baseDir ./`
 
 
