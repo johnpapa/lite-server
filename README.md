@@ -41,9 +41,3 @@ Array of file patterns to watch. Defaults to all html, css and js.
 Folder (or collection of folders) to serve. Defaults to `./`. Use this when you want to specify which folders you want to serve assets from.
 
 `--baseDir './'`
-
-### fallback
-
-File to serve when a route is not found. Useful for SPAs. Defaults to `source` folder + `/index.html`.
-
-`--fallback '/src/index.html'`
