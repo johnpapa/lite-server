@@ -1,6 +1,6 @@
 {
   "name": "lite-server",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Lightweight development node server for serving a web app, providing a fallback for browser history API, loading in the browser, and injecting scripts on the fly.",
   "main": "./lib/lite-server",
   "scripts": {},
