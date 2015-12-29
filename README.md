@@ -26,7 +26,7 @@ Sets the port to serve. Defaults to 3000.
 `lite-server --port 3000`
 
 ### open
-Which folder to holds the `index.html`. Defaults to `./`
+Which folder to holds the index file (`index.html` by default). Defaults to `./`
 
 `lite-server --open src`
 
@@ -46,4 +46,7 @@ or to serve from multiple folders
 
 `lite-server --baseDir ./src --baseDir ./`
 
+### indexFile
+Which file will be opened after the server starts. Defaults to `index.html`
 
+`lite-server --indexFile main.html`
