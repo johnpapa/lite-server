@@ -50,3 +50,22 @@ or to serve from multiple folders
 Which file will be opened after the server starts. Defaults to `index.html`
 
 `lite-server --indexFile main.html`
+
+### api
+Redirect calls to `/api/something` to `http://localhost:3002/api/something`.
+
+`lite-server --api`
+
+or redirect to `http://localhost:4000/somewhat/api/something`
+
+`lite-server --api http://localhost:4000/somewhat`
+
+
+### api-context
+Redirect calls to `/something` to `http://localhost:3002/something`.
+
+`lite-server --api-context '/something'`
+
+or redirect to `http://localhost:4000/somewhat/something`
+
+`lite-server --api http://localhost:4000/somewhat --api-context '/something'`
