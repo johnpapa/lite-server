@@ -36,6 +36,18 @@ Array of file patterns to watch. Defaults to all html, css and js.
 
 `lite-server --files '/**/*.html' '/**/*.css' '/**/*.js'`
 
+### debounce
+
+Restrict the frequency in which browser reload events are emitted in milliseconds. Defaults to 0.
+
+`lite-server --debounce 250`
+
+### delay
+
+Time in milliseconds to wait before instructing the browser to reload/inject following a file change event. Defaults to 0.
+
+`lite-server --delay 250`
+
 ### baseDir
 
 Folder (or collection of folders) to serve. Defaults to `./`. Use this when you want to specify which folders you want to serve assets from.
