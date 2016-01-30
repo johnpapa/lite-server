@@ -2,51 +2,41 @@
 
 Lightweight *development only* node server that serves a web app, opens it in the browser, refreshes when html or javascript change, injects CSS changes using sockets, and has a fallback page when a route is not found.
 
-## Get Started
+## Usage
 
-### Serve the current folder and `./index.html`
-Serve from the current folder and open (browse to) the default file (usually index.html) in that folder.
+The default behavior serves from the current folder, opens a browser, and applies a HTML5 route fallback to `./index.html`.
 
-`lite-server`
+```
+$ lite-server
+```
 
-### Serve the current folder and `./src/index.html`
-Serve from the current folder and open (browse to) the default file (usually index.html) in the `src` folder.
+## Custom configuration
+lite-server utilizes [Browsersync](https://www.browsersync.io/), and allows for configuration overrides via a local `bs-config.json` or `bs-config.js` file in your project.
 
-`lite-server --open src`
+For example, to change the server port, watched file paths, and base directory for your project (`bs-config.json`):
+```
+{
+  "port": 8000,
+  "files": ["./src/**/*.html", "./src/**/*.css", "./src/**/*.js"],
+  "server": { "baseDir": "./src" }
+}
+```
 
-### Serve and log all options
+A more complicated example with modifications to the server middleware ('bs-config.js'):
+```
+// Requires running `npm i connect-history-api-fallback --save-dev` in local project
+module.exports = {
+  server: {
+    middleware: {
+       0: null,  // removes logger middleware
+       1: require('connect-history-api-fallback')({index: '/index.html', verbose: true})
+    }
+  }
+};
+```
 
-`lite-server --verbose`
+A list of the entire set of Browsersync options can be found in its docs: <http://www.browsersync.io/docs/options/>
 
-## Options
+## License
 
-### port
-Sets the port to serve. Defaults to 3000.
-
-`lite-server --port 3000`
-
-### open
-Which folder to holds the index file (`index.html` by default). Defaults to `./`
-
-`lite-server --open src`
-
-### files
-
-Array of file patterns to watch. Defaults to all html, css and js.
-
-`lite-server --files '/**/*.html' '/**/*.css' '/**/*.js'`
-
-### baseDir
-
-Folder (or collection of folders) to serve. Defaults to `./`. Use this when you want to specify which folders you want to serve assets from.
-
-`lite-server --baseDir './'`
-
-or to serve from multiple folders
-
-`lite-server --baseDir ./src --baseDir ./`
-
-### indexFile
-Which file will be opened after the server starts. Defaults to `index.html`
-
-`lite-server --indexFile main.html`
+Code released under the [MIT license](./LICENSE).
