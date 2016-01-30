@@ -22,7 +22,7 @@ For example, to change the server port, watched file paths, and base directory f
 }
 ```
 
-A more complicated example with modifications to the server middleware ('bs-config.js'):
+A more complicated example with modifications to the server middleware (`bs-config.js`):
 ```js
 // Requires running `npm i connect-history-api-fallback --save-dev` in local project
 module.exports = {
