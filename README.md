@@ -14,7 +14,7 @@ $ lite-server
 lite-server utilizes [Browsersync](https://www.browsersync.io/), and allows for configuration overrides via a local `bs-config.json` or `bs-config.js` file in your project.
 
 For example, to change the server port, watched file paths, and base directory for your project (`bs-config.json`):
-```
+```json
 {
   "port": 8000,
   "files": ["./src/**/*.html", "./src/**/*.css", "./src/**/*.js"],
@@ -23,7 +23,7 @@ For example, to change the server port, watched file paths, and base directory f
 ```
 
 A more complicated example with modifications to the server middleware ('bs-config.js'):
-```
+```js
 // Requires running `npm i connect-history-api-fallback --save-dev` in local project
 module.exports = {
   server: {
