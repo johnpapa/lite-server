@@ -21,7 +21,7 @@ $ lite-server
 ## Custom Configuration
 lite-server uses [BrowserSync](https://www.browsersync.io/), and allows for configuration overrides via a local `bs-config.json` or `bs-config.js` file in your project.
 
-For example, to change the server port, watched file paths, and base directory for your project (`bs-config.json`):
+For example, to change the server port, watched file paths, and base directory for your project, create a `bs-config.json` in your project's folder:
 ```json
 {
   "port": 8000,
@@ -30,14 +30,35 @@ For example, to change the server port, watched file paths, and base directory f
 }
 ```
 
-A more complicated example with modifications to the server middleware (`bs-config.js`):
+A more complicated example with modifications to the server middleware can be done with a `bs-config.js` file, which requires the `module.exports = { ... };` syntax:
 ```js
-// Requires running `npm i connect-history-api-fallback --save-dev` in local project
 module.exports = {
   server: {
     middleware: {
-       0: null,  // removes logger middleware
-       1: require('connect-history-api-fallback')({index: '/index.html', verbose: true})
+      // overrides the second middleware default with new settings
+      1: require('connect-history-api-fallback')({index: '/index.html', verbose: true})
+    }
+  }
+};
+```
+
+**NOTE:** Keep in mind that when using middleware overrides the specific middleware module must be installed in your project. For the above example, you'll need to do:
+```bash
+$ npm install connect-history-api-fallback --save-dev
+```
+
+...otherwise you'll get an error similar to:
+```
+Error: Cannot find module 'connect-history-api-fallback'
+```
+
+Another example: To remove one of the [default middlewares](./lib/config-defaults.js), such as `connect-logger`, you can set it's array index to `null`:
+
+```js
+module.exports = {
+  server: {
+    middleware: {      
+      0: null     // removes default `connect-logger` middleware
     }
   }
 };
