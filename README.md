@@ -17,7 +17,7 @@ For example, to change the server port, watched file paths, and base directory f
 ```json
 {
   "port": 8000,
-  "files": ["./src/**/*.html", "./src/**/*.css", "./src/**/*.js"],
+  "files": ["./src/**/*.{html,htm,css,js}"],
   "server": { "baseDir": "./src" }
 }
 ```
