@@ -9,7 +9,10 @@
     "url": "git+https://github.com/johnpapa/lite-server.git"
   },
   "keywords": [],
-  "author": "John Papa <john@johnpapa.net> (http://johnpapa.net/)",
+  "contributors": [
+    "John Papa <john@johnpapa.net>",
+    "Christopher Martin <cgmartin@gmail.com>"
+  ],
   "license": "MIT",
   "bin": {
     "lite-server": "./bin/lite-server"
