@@ -22,12 +22,10 @@ $ npm install lite-server --save-dev
 
 ...and add a "script" entry within your project's `package.json` file:
 ```
-# package.json
-...
+# Inside package.json...
   "scripts": {    
     "dev": "lite-server"
   },
-...
 ```
 
 With the above script entry, you can then start `lite-server` via:
