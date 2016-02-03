@@ -2,6 +2,9 @@
 
 Lightweight *development only* node server that serves a web app, opens it in the browser, refreshes when html or javascript change, injects CSS changes using sockets, and has a fallback page when a route is not found.
 
+[![Dependency Status](https://david-dm.org/johnpapa/lite-server.svg)](https://david-dm.org/johnpapa/lite-server)
+[![npm version](https://badge.fury.io/js/lite-server.svg)](http://badge.fury.io/js/lite-server)
+
 ## Why
 
 BrowserSync does most of what we want in a super fast lightweight development server. It serves the static content, detects changes, refreshes the browser, and offers many customizations.
@@ -10,15 +13,42 @@ When creating a SPA there are routes that are only known to the browser. For exa
 
 `lite-server` is a simple customized wrapper around BrowserSync to make it easy to serve SPAs.
 
-## Usage
+## Installation and Usage
 
-The default behavior serves from the current folder, opens a browser, and applies a HTML5 route fallback to `./index.html`.
-
+The recommended installation method is a local NPM install for your project:
+```bash
+$ npm install lite-server --save-dev
 ```
+
+...and add a "script" entry within your project's `package.json` file:
+```
+# Inside package.json...
+  "scripts": {    
+    "dev": "lite-server"
+  },
+```
+
+With the above script entry, you can then start `lite-server` via:
+```bash
+$ npm run dev
+```
+
+Other options for running locally installed NPM binaries is discussed in this Stack Overflow question: [How to use package installed locally in node_modules](http://stackoverflow.com/q/9679932)
+
+### Global Installation
+
+lite-server can be also installed globally, if preferred:
+```bash
+$ npm install -g lite-server
+
+# To run:
 $ lite-server
 ```
 
 ## Custom Configuration
+
+The default behavior serves from the current folder, opens a browser, and applies a HTML5 route fallback to `./index.html`.
+
 lite-server uses [BrowserSync](https://www.browsersync.io/), and allows for configuration overrides via a local `bs-config.json` or `bs-config.js` file in your project.
 
 For example, to change the server port, watched file paths, and base directory for your project, create a `bs-config.json` in your project's folder:
