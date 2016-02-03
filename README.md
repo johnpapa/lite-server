@@ -10,6 +10,13 @@ When creating a SPA there are routes that are only known to the browser. For exa
 
 `lite-server` is a simple customized wrapper around BrowserSync to make it easy to serve SPAs.
 
+## Installation
+
+lite-server can be installed globally with NPM:
+```
+npm install -g lite-server
+```
+
 ## Usage
 
 The default behavior serves from the current folder, opens a browser, and applies a HTML5 route fallback to `./index.html`.
