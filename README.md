@@ -13,22 +13,44 @@ When creating a SPA there are routes that are only known to the browser. For exa
 
 `lite-server` is a simple customized wrapper around BrowserSync to make it easy to serve SPAs.
 
-## Installation
+## Installation and Usage
 
-lite-server can be installed globally with NPM:
+The recommended installation method is a local NPM install for your project:
+```bash
+$ npm install lite-server --save-dev
 ```
+
+...and add a "script" entry within your project's `package.json` file:
+```
+# package.json
+...
+  "scripts": {    
+    "dev": "lite-server"
+  },
+...
+```
+
+With the above script entry, you can then start `lite-server` via:
+```bash
+$ npm run dev
+```
+
+Other options for running locally installed NPM binaries is discussed in this Stack Overflow question: [How to use package installed locally in node_modules](http://stackoverflow.com/q/9679932)
+
+### Global Installation
+
+lite-server can be also installed globally, if preferred:
+```bash
 $ npm install -g lite-server
-```
 
-## Usage
-
-The default behavior serves from the current folder, opens a browser, and applies a HTML5 route fallback to `./index.html`.
-
-```
+# To run:
 $ lite-server
 ```
 
 ## Custom Configuration
+
+The default behavior serves from the current folder, opens a browser, and applies a HTML5 route fallback to `./index.html`.
+
 lite-server uses [BrowserSync](https://www.browsersync.io/), and allows for configuration overrides via a local `bs-config.json` or `bs-config.js` file in your project.
 
 For example, to change the server port, watched file paths, and base directory for your project, create a `bs-config.json` in your project's folder:
