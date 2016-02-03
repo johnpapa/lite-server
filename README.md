@@ -2,6 +2,9 @@
 
 Lightweight *development only* node server that serves a web app, opens it in the browser, refreshes when html or javascript change, injects CSS changes using sockets, and has a fallback page when a route is not found.
 
+[![Dependency Status](https://david-dm.org/johnpapa/lite-server.svg)](https://david-dm.org/johnpapa/lite-server)
+[![npm version](https://badge.fury.io/js/lite-server.svg)](http://badge.fury.io/js/lite-server)
+
 ## Why
 
 BrowserSync does most of what we want in a super fast lightweight development server. It serves the static content, detects changes, refreshes the browser, and offers many customizations.
