@@ -14,7 +14,7 @@ When creating a SPA there are routes that are only known to the browser. For exa
 
 lite-server can be installed globally with NPM:
 ```
-npm install -g lite-server
+$ npm install -g lite-server
 ```
 
 ## Usage
