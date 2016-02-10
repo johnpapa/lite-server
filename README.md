@@ -51,6 +51,11 @@ The default behavior serves from the current folder, opens a browser, and applie
 
 lite-server uses [BrowserSync](https://www.browsersync.io/), and allows for configuration overrides via a local `bs-config.json` or `bs-config.js` file in your project.
 
+You can provide custom path to your config file via `-c` or `--config=` run time options:
+```bash
+lite server -c configs/my-bs-config.js
+```
+
 For example, to change the server port, watched file paths, and base directory for your project, create a `bs-config.json` in your project's folder:
 ```json
 {
