@@ -22,7 +22,8 @@
     "browser-sync": "^2.11.1",
     "connect-history-api-fallback": "^1.1.0",
     "connect-logger": "0.0.1",
-    "lodash": "^4.1.0"
+    "lodash": "^4.1.0",
+    "minimist": "1.2.0"
   },
   "devDependencies": {}
 }
