@@ -53,7 +53,7 @@ lite-server uses [BrowserSync](https://www.browsersync.io/), and allows for conf
 
 You can provide custom path to your config file via `-c` or `--config=` run time options:
 ```bash
-lite server -c configs/my-bs-config.js
+lite-server -c configs/my-bs-config.js
 ```
 
 For example, to change the server port, watched file paths, and base directory for your project, create a `bs-config.json` in your project's folder:
