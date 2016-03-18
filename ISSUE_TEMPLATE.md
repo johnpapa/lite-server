@@ -6,6 +6,8 @@ The behavior you expect to see, and the actual behavior...
 For feature requests, a description of the problem you're trying to solve, including *why* you think this is a problem.
 
 ### Bug repro steps
+Please give us an isolated way to reproduce the behavior (example: GitHub repository with code that anyone can clone to observe the problem, or a Dockerfile to replicate your environment)
+
 1. 
 2. 
 3. 
