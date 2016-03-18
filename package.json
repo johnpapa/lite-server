@@ -3,7 +3,9 @@
   "version": "2.1.0",
   "description": "Lightweight development node server for serving a web app, providing a fallback for browser history API, loading in the browser, and injecting scripts on the fly.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "eslint *.js lib/*.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnpapa/lite-server.git"
@@ -25,5 +27,7 @@
     "lodash": "^4.6.1",
     "minimist": "1.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^2.4.0"
+  }
 }
