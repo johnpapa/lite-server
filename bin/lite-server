@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('../lib/lite-server.js');
+require('../lib/lite-server')();
