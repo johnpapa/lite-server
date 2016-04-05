@@ -9,7 +9,7 @@ describe('config-defaults', () => {
     var loggerMock;
 
     beforeEach(() => {
-        mockery.enable();
+        mockery.enable({useCleanCache: true});
 
         fallbackMock = sinon.stub();
         mockery.registerMock('connect-history-api-fallback', fallbackMock);
