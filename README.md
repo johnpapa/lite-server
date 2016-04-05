@@ -4,6 +4,7 @@ Lightweight *development only* node server that serves a web app, opens it in th
 
 [![Dependency Status](https://david-dm.org/johnpapa/lite-server.svg)](https://david-dm.org/johnpapa/lite-server)
 [![npm version](https://badge.fury.io/js/lite-server.svg)](http://badge.fury.io/js/lite-server)
+[![Build Status](https://travis-ci.org/johnpapa/lite-server.svg?branch=master)](https://travis-ci.org/johnpapa/lite-server)
 
 ## Why
 
