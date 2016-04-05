@@ -102,7 +102,18 @@ module.exports = {
 A list of the entire set of BrowserSync options can be found in its docs: <http://www.browsersync.io/docs/options/>
 
 ## Known Issues
+
 CSS with Angular 2 is embedded thus even though BrowserSync detects the file change to CSS, it does not inject the file via sockets. As a workaround, `injectChanges` defaults to `false`.
+
+## Contributing
+
+1. Fork and clone it
+1. Install dependencies: `npm install`
+1. Create a feature branch: `git checkout -b new-feature`
+1. Commit changes: `git commit -am 'Added a feature'`
+1. Run static code analysis and unit tests: `npm test`
+1. Push to the remote branch: `git push origin new-feature`
+1. Create a new [Pull Request](https://github.com/johnpapa/lite-server/pull/new/master)
 
 ## License
 
