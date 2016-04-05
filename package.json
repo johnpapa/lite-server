@@ -4,7 +4,7 @@
   "description": "Lightweight development node server for serving a web app, providing a fallback for browser history API, loading in the browser, and injecting scripts on the fly.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint *.js lib/*.js"
+    "test": "eslint *.js lib/*.js && istanbul cover _mocha -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,10 @@
     "minimist": "1.2.0"
   },
   "devDependencies": {
-    "eslint": "^2.4.0"
+    "eslint": "^2.4.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "mockery": "^1.4.1",
+    "sinon": "^1.17.3"
   }
 }
