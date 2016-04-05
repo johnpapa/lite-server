@@ -13,7 +13,7 @@ describe('lite-server', () => {
     var callbackStub;
 
     beforeEach(() => {
-        mockery.enable();
+        mockery.enable({useCleanCache: true});
 
         browserSyncMethodStubs = {init: sinon.stub()};
         browserSyncMock = sinon.stub().returns(browserSyncMethodStubs);
@@ -80,6 +80,23 @@ describe('lite-server', () => {
 
         assert.ok(bs.init, 'returns browsersync');
         assert.ok(consoleStubs.info.calledWithMatch('Did not detect'));
+    });
+
+    it('should support bs-config as function', () => {
+        var bsConfigMock = sinon.stub().returns({b: 2});
+        mockery.registerMock(path.resolve('./bs-config'), bsConfigMock);
+
+        var liteServer = require('../lib/lite-server');
+        var bs = liteServer({console: consoleStubs, argv: []}, callbackStub);
+        assert.ok(bs.init, 'returns browsersync');
+
+        assert.ok(browserSyncMethodStubs.init.calledWithMatch({
+            server: {
+                middleware: ['m1', 'm2']
+            },
+            b: 2
+        }), 'configs were merged');
+        assert.ok(bsConfigMock.calledWith(bs), 'browsersync passed into bsconfig fn');
     });
 
 });
