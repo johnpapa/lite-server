@@ -77,6 +77,25 @@ module.exports = {
 };
 ```
 
+The `bs-config.js` file may also export a function that receives the lite-server Browsersync instance as its only argument. While not required, the return value of this function will be used to extend the default lite-server configuration.
+```js
+module.exports = function(bs) {
+
+  return {
+    server: {
+      middleware: {
+        // overrides the second middleware default with new settings
+        1: require('connect-history-api-fallback')({
+          index: '/index.html',
+          verbose: true
+        })
+      }
+    }
+  };
+
+};
+```
+
 **NOTE:** Keep in mind that when using middleware overrides the specific middleware module must be installed in your project. For the above example, you'll need to do:
 ```bash
 $ npm install connect-history-api-fallback --save-dev
