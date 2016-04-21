@@ -1,6 +1,6 @@
 {
   "name": "lite-server",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Lightweight development node server for serving a web app, providing a fallback for browser history API, loading in the browser, and injecting scripts on the fly.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/johnpapa/lite-server.git"
   },
-  "keywords": [],
+  "keywords": [
+    "angular",
+    "spa",
+    "static",
+    "server",
+    "development"
+  ],
   "contributors": [
     "John Papa <john@johnpapa.net>",
     "Christopher Martin <cgmartin@gmail.com>"
