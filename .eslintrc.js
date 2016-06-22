@@ -71,7 +71,7 @@ module.exports = {
         ],
         "lines-around-comment": "off",
         "max-depth": "error",
-        "max-len": [2, {"code": 100, "tabWidth": 4, "ignoreUrls": true}],
+        "max-len": [2, {"code": 100, "tabWidth": 2, "ignoreUrls": true}],
         "max-nested-callbacks": "error",
         "max-params": "error",
         "max-statements": "off",
