@@ -121,6 +121,20 @@ module.exports = {
 
 A list of the entire set of BrowserSync options can be found in its docs: <http://www.browsersync.io/docs/options/>
 
+## Testing
+
+When using `lite-server` to run end to end tests, we may not want to log verbosely. We may also want to prevent the browser from opening. These options in the `bs-config.js` will silence all logging from `lite-server`:
+
+```
+  open: false
+  logLevel: "silent",
+  server: {
+    middleware: {
+      0: null
+    }
+  }
+```
+
 ## Known Issues
 
 CSS with Angular 2 is embedded thus even though BrowserSync detects the file change to CSS, it does not inject the file via sockets. As a workaround, `injectChanges` defaults to `false`.
