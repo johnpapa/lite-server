@@ -34,10 +34,10 @@
     "minimist": "1.2.0"
   },
   "devDependencies": {
-    "eslint": "^2.8.0",
+    "eslint": "^5.16.0",
     "istanbul": "^0.4.3",
     "mocha": "^6.1.4",
-    "mockery": "^1.6.2",
-    "sinon": "^1.17.3"
+    "mockery": "^2.1.0",
+    "sinon": "^7.3.2"
   }
 }
