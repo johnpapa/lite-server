@@ -1,6 +1,6 @@
 # lite-server
 
-Lightweight *development only* node server that serves a web app, opens it in the browser, refreshes when html or javascript change, injects CSS changes using sockets, and has a fallback page when a route is not found.
+Lightweight _development only_ node server that serves a web app, opens it in the browser, refreshes when html or javascript change, injects CSS changes using sockets, and has a fallback page when a route is not found.
 
 [![Dependency Status](https://david-dm.org/johnpapa/lite-server.svg)](https://david-dm.org/johnpapa/lite-server)
 [![npm version](https://badge.fury.io/js/lite-server.svg)](http://badge.fury.io/js/lite-server)
@@ -27,7 +27,7 @@ $ yarn add lite-server --dev # or yarn
 
 ```json
 # Inside package.json...
-  "scripts": {    
+  "scripts": {
     "dev": "lite-server"
   },
 ```
@@ -86,7 +86,10 @@ module.exports = {
   server: {
     middleware: {
       // overrides the second middleware default with new settings
-      1: require('connect-history-api-fallback')({index: '/index.html', verbose: true})
+      1: require('connect-history-api-fallback')({
+        index: '/index.html',
+        verbose: true
+      })
     }
   }
 };
@@ -96,7 +99,6 @@ The `bs-config.js` file may also export a function that receives the lite-server
 
 ```js
 module.exports = function(bs) {
-
   return {
     server: {
       middleware: {
@@ -108,7 +110,6 @@ module.exports = function(bs) {
       }
     }
   };
-
 };
 ```
 
@@ -130,7 +131,7 @@ Another example: To remove one of the [default middlewares](./lib/config-default
 module.exports = {
   server: {
     middleware: {
-      0: null     // removes default `connect-logger` middleware
+      0: null // removes default `connect-logger` middleware
     }
   }
 };
