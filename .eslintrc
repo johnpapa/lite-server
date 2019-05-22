@@ -3,25 +3,17 @@
     "node": true,
     "es6": true
   },
-  "extends": [
-    "eslint:recommended"
-  ],
+  "extends": ["eslint:recommended"],
   "rules": {
     "accessor-pairs": "error",
-    "array-bracket-spacing": [
-      "error",
-      "never"
-    ],
+    "array-bracket-spacing": ["error", "never"],
     "array-callback-return": "error",
     "arrow-body-style": "error",
     "arrow-parens": "error",
     "arrow-spacing": "error",
     "block-scoped-var": "error",
     "block-spacing": "error",
-    "brace-style": [
-      "error",
-      "1tbs"
-    ],
+    "brace-style": ["error", "1tbs"],
     "callback-return": "error",
     "camelcase": "error",
     "comma-spacing": [
@@ -31,10 +23,7 @@
         "before": false
       }
     ],
-    "comma-style": [
-      "error",
-      "last"
-    ],
+    "comma-style": ["error", "last"],
     "complexity": ["error", 20],
     "computed-property-spacing": "error",
     "consistent-return": "error",
@@ -65,10 +54,7 @@
         "before": true
       }
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
+    "linebreak-style": "off",
     "lines-around-comment": "off",
     "max-depth": "error",
     "max-len": [
@@ -165,10 +151,7 @@
     "no-warning-comments": "error",
     "no-whitespace-before-property": "error",
     "no-with": "error",
-    "object-curly-spacing": [
-      "error",
-      "always"
-    ],
+    "object-curly-spacing": ["error", "always"],
     "object-shorthand": "error",
     "one-var": "off",
     "one-var-declaration-per-line": "error",
@@ -182,10 +165,7 @@
     "prefer-spread": "error",
     "prefer-template": "error",
     "quote-props": "off",
-    "quotes": [
-      "error",
-      "single"
-    ],
+    "quotes": ["error", "single"],
     "radix": "error",
     "require-jsdoc": "off",
     "require-yield": "error",
@@ -195,16 +175,10 @@
     "sort-vars": "error",
     "space-before-blocks": "error",
     "space-before-function-paren": "off",
-    "space-in-parens": [
-      "error",
-      "never"
-    ],
+    "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
     "space-unary-ops": "error",
-    "spaced-comment": [
-      "error",
-      "always"
-    ],
+    "spaced-comment": ["error", "always"],
     "strict": "error",
     "template-curly-spacing": "error",
     "valid-jsdoc": "error",
@@ -212,9 +186,6 @@
     "wrap-iife": "error",
     "wrap-regex": "error",
     "yield-star-spacing": "error",
-    "yoda": [
-      "error",
-      "never"
-    ]
+    "yoda": ["error", "never"]
   }
 }
