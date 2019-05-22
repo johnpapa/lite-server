@@ -1,12 +1,12 @@
 /* global it, describe, beforeEach, afterEach */
 'use strict';
-var assert = require('assert');
-var mockery = require('mockery');
-var sinon = require('sinon');
+const assert = require('assert');
+const mockery = require('mockery');
+const sinon = require('sinon');
 
 describe('config-defaults', () => {
-  var fallbackMock;
-  var loggerMock;
+  let fallbackMock;
+  let loggerMock;
 
   beforeEach(() => {
     mockery.enable({ useCleanCache: true });
@@ -28,16 +28,16 @@ describe('config-defaults', () => {
   it('should provide defaults', () => {
     fallbackMock.returns('fallback-middleware');
     loggerMock.returns('logger-middleware');
-    var configDefaults = require('../lib/config-defaults');
+    const configDefaults = require('../lib/config-defaults');
 
-    assert.strictEqual(configDefaults.injectChanges, false,
-      'includes NG2 styleUrls workaround');
-    assert.ok(configDefaults.files.length,
-      'includes files array');
-    assert.strictEqual(configDefaults.watchOptions.ignored, 'node_modules',
-      'ignores node_modules from watchlist');
-    assert.ok(configDefaults.server.baseDir,
-      'includes basedir');
+    assert.strictEqual(configDefaults.injectChanges, false, 'includes NG2 styleUrls workaround');
+    assert.ok(configDefaults.files.length, 'includes files array');
+    assert.strictEqual(
+      configDefaults.watchOptions.ignored,
+      'node_modules',
+      'ignores node_modules from watchlist'
+    );
+    assert.ok(configDefaults.server.baseDir, 'includes basedir');
     assert.deepEqual(
       configDefaults.server.middleware,
       ['logger-middleware', 'fallback-middleware'],
@@ -46,5 +46,4 @@ describe('config-defaults', () => {
     assert.ok(loggerMock.called, 'logger middleware initialized');
     assert.ok(fallbackMock.called, 'fallback middleware initialized');
   });
-
 });
