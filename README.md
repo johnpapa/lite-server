@@ -40,6 +40,14 @@ $ npm run dev
 
 Other options for running locally installed NPM binaries is discussed in this Stack Overflow question: [How to use package installed locally in node_modules](http://stackoverflow.com/q/9679932)
 
+### Using on the fly
+
+lite-server can be sued with `npx`
+
+```bash
+npx lite-server
+```
+
 ### Global Installation
 
 lite-server can be also installed globally, if preferred:
