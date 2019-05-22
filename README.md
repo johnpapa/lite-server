@@ -42,7 +42,7 @@ Other options for running locally installed NPM binaries is discussed in this St
 
 ### Using on the fly
 
-lite-server can be sued with `npx`
+lite-server can be used with `npx`
 
 ```bash
 npx lite-server
