@@ -54,7 +54,7 @@ npx lite-server
 lite-server can be also installed globally, if preferred:
 
 ```bash
-$ npm install -g lite-server
+$ npm install --global lite-server
 
 # To run:
 $ lite-server
