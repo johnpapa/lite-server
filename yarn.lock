@@ -142,8 +142,8 @@ are-we-there-yet@~1.1.2:
     readable-stream "^2.0.0 || ^1.1.13"
 
 argparse@^1.0.7:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.9.tgz#73d83bc263f86e97f8cc4f6bae1b0e90a7d22c86"
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
   dependencies:
     sprintf-js "~1.0.2"
 
@@ -309,7 +309,7 @@ browser-sync-ui@^2.26.4:
     socket.io-client "^2.0.4"
     stream-throttle "^0.1.3"
 
-browser-sync@^2.26.5:
+browser-sync@^2.26.7:
   version "2.26.7"
   resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.26.7.tgz#120287716eb405651a76cc74fe851c31350557f9"
   dependencies:
@@ -891,7 +891,7 @@ espree@^6.0.0:
     acorn-jsx "^5.0.0"
     eslint-visitor-keys "^1.0.0"
 
-esprima@2.7.x, esprima@^2.6.0, esprima@^2.7.1:
+esprima@2.7.x, esprima@^2.7.1:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
 
@@ -1624,19 +1624,12 @@ js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
 
-js-yaml@3.13.1, js-yaml@^3.13.1:
+js-yaml@3.13.1, js-yaml@3.x, js-yaml@^3.13.1:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
-
-js-yaml@3.x:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^2.6.0"
 
 json-schema-traverse@^0.4.1:
   version "0.4.1"
@@ -1735,7 +1728,7 @@ lodash.isfinite@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/lodash.isfinite/-/lodash.isfinite-3.3.2.tgz#fb89b65a9a80281833f0b7478b3a5104f898ebb3"
 
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14:
+lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
 
