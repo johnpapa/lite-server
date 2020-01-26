@@ -36,7 +36,7 @@
   "devDependencies": {
     "eslint": "^6.0.0",
     "istanbul": "^0.4.3",
-    "mocha": "^6.1.4",
+    "mocha": "^7.0.1",
     "mockery": "^2.1.0",
     "sinon": "^7.3.2"
   }
