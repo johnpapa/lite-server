@@ -31,7 +31,7 @@
     "connect-history-api-fallback": "^1.2.0",
     "connect-logger": "0.0.1",
     "lodash": "^4.17.15",
-    "minimist": "1.2.0"
+    "minimist": "1.2.5"
   },
   "devDependencies": {
     "eslint": "^6.0.0",
