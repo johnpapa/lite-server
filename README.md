@@ -5,7 +5,7 @@ Lightweight _development only_ node server that serves a web app, opens it in th
 [![Dependency Status](https://david-dm.org/johnpapa/lite-server.svg)](https://david-dm.org/johnpapa/lite-server)
 [![npm version](https://badge.fury.io/js/lite-server.svg)](http://badge.fury.io/js/lite-server)
 [![Build Status](https://travis-ci.org/johnpapa/lite-server.svg?branch=master)](https://travis-ci.org/johnpapa/lite-server) [![Greenkeeper badge](https://badges.greenkeeper.io/johnpapa/lite-server.svg)](https://greenkeeper.io/)
-[![Build Status](https://dev.azure.com/johnpapa/lite-server/_apis/build/status/johnpapa.lite-server?branchName=master)](https://dev.azure.com/johnpapa/lite-server/_build/latest?definitionId=4&branchName=master)
+[![Build Status](https://dev.azure.com/johnpapa/lite-server/_apis/build/status/johnpapa.lite-server?branchName=master)](https://dev.azure.com/johnpapa/lite-server/_build/latest?definitionId=4&branchName=master&WT.mc_id=liteserver-github-jopapa)
 
 ## Why
 
