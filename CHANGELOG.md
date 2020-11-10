@@ -8,6 +8,7 @@ All notable changes to the code will be documented in this file.
 - Fixed npm outdated packages
 - Updated to 2.6.1
 - Updated default branch to `main`
+- update tests to use node 12 and 14
 
 ## 2.5.4
 
