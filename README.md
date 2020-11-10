@@ -20,8 +20,8 @@ When creating a SPA there are routes that are only known to the browser. For exa
 The recommended installation method is a local NPM install for your project:
 
 ```bash
-$ npm install lite-server --save-dev
-$ yarn add lite-server --dev # or yarn
+npm install lite-server --save-dev
+yarn add lite-server --dev # or yarn
 ```
 
 ...and add a "script" entry within your project's `package.json` file:
@@ -36,7 +36,7 @@ $ yarn add lite-server --dev # or yarn
 With the above script entry, you can then start `lite-server` via:
 
 ```bash
-$ npm run dev
+npm run dev
 ```
 
 Other options for running locally installed NPM binaries is discussed in this Stack Overflow question: [How to use package installed locally in node_modules](http://stackoverflow.com/q/9679932)
@@ -54,10 +54,10 @@ npx lite-server
 lite-server can be also installed globally, if preferred:
 
 ```bash
-$ npm install --global lite-server
+npm install --global lite-server
 
 # To run:
-$ lite-server
+lite-server
 ```
 
 ## Custom Configuration
@@ -97,27 +97,27 @@ module.exports = {
       // overrides the second middleware default with new settings
       1: require('connect-history-api-fallback')({
         index: '/index.html',
-        verbose: true
-      })
-    }
-  }
+        verbose: true,
+      }),
+    },
+  },
 };
 ```
 
 The `bs-config.js` file may also export a function that receives the lite-server Browsersync instance as its only argument. While not required, the return value of this function will be used to extend the default lite-server configuration.
 
 ```js
-module.exports = function(bs) {
+module.exports = function (bs) {
   return {
     server: {
       middleware: {
         // overrides the second middleware default with new settings
         1: require('connect-history-api-fallback')({
           index: '/index.html',
-          verbose: true
-        })
-      }
-    }
+          verbose: true,
+        }),
+      },
+    },
   };
 };
 ```
@@ -125,12 +125,12 @@ module.exports = function(bs) {
 **NOTE:** Keep in mind that when using middleware overrides the specific middleware module must be installed in your project. For the above example, you'll need to do:
 
 ```bash
-$ npm install connect-history-api-fallback --save-dev
+npm install connect-history-api-fallback --save-dev
 ```
 
 ...otherwise you'll get an error similar to:
 
-```
+```bash
 Error: Cannot find module 'connect-history-api-fallback'
 ```
 
@@ -140,9 +140,9 @@ Another example: To remove one of the [default middlewares](./lib/config-default
 module.exports = {
   server: {
     middleware: {
-      0: null // removes default `connect-logger` middleware
-    }
-  }
+      0: null, // removes default `connect-logger` middleware
+    },
+  },
 };
 ```
 
@@ -168,13 +168,13 @@ CSS with Angular 2 is embedded thus even though BrowserSync detects the file cha
 
 ## Contributing
 
-1.  Fork and clone it
-1.  Install dependencies: `npm install`
-1.  Create a feature branch: `git checkout -b new-feature`
-1.  Commit changes: `git commit -am 'Added a feature'`
-1.  Run static code analysis and unit tests: `npm test`
-1.  Push to the remote branch: `git push origin new-feature`
-1.  Create a new [Pull Request](https://github.com/johnpapa/lite-server/pull/new/master)
+1. Fork and clone it
+1. Install dependencies: `npm install`
+1. Create a feature branch: `git checkout -b new-feature`
+1. Commit changes: `git commit -am 'Added a feature'`
+1. Run static code analysis and unit tests: `npm test`
+1. Push to the remote branch: `git push origin new-feature`
+1. Create a new [Pull Request](https://github.com/johnpapa/lite-server/pull/new/master)
 
 ## License
 
