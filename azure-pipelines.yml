@@ -14,10 +14,10 @@ jobs:
     demands: npm
   strategy:
     matrix:
-      node_8_x:
-        node_version: 8.x
-      node_10_x:
-        node_version: 10.x
+      node_12_x:
+        node_version: 12.x
+      node_14_x:
+        node_version: 14.x
   steps:
   - task: NodeTool@0
     displayName: 'Use $(node_version)'
@@ -42,11 +42,17 @@ jobs:
     # https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent
     name: Hosted macOS
     demands: npm
+  strategy:
+    matrix:
+      node_12_x:
+        node_version: 12.x
+      node_14_x:
+        node_version: 14.x
   steps:
   - task: NodeTool@0
-    displayName: 'Use Node 10.x'
+    displayName: 'Use $(node_version)'
     inputs:
-      versionSpec: 10.x
+      versionSpec: $(node_version)
 
   - task: Npm@1
     displayName: 'Install dependencies'
