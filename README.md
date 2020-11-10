@@ -4,8 +4,8 @@ Lightweight _development only_ node server that serves a web app, opens it in th
 
 [![Dependency Status](https://david-dm.org/johnpapa/lite-server.svg)](https://david-dm.org/johnpapa/lite-server)
 [![npm version](https://badge.fury.io/js/lite-server.svg)](http://badge.fury.io/js/lite-server)
-[![Build Status](https://travis-ci.org/johnpapa/lite-server.svg?branch=master)](https://travis-ci.org/johnpapa/lite-server) [![Greenkeeper badge](https://badges.greenkeeper.io/johnpapa/lite-server.svg)](https://greenkeeper.io/)
-[![Build Status](https://dev.azure.com/johnpapa/lite-server/_apis/build/status/johnpapa.lite-server?branchName=master)](https://dev.azure.com/johnpapa/lite-server/_build/latest?definitionId=4&branchName=master&WT.mc_id=liteserver-github-jopapa)
+[![Build Status](https://travis-ci.org/johnpapa/lite-server.svg?branch=main)](https://travis-ci.org/johnpapa/lite-server) [![Greenkeeper badge](https://badges.greenkeeper.io/johnpapa/lite-server.svg)](https://greenkeeper.io/)
+[![Build Status](https://dev.azure.com/johnpapa/lite-server/_apis/build/status/johnpapa.lite-server?branchName=main)](https://dev.azure.com/johnpapa/lite-server/_build/latest?definitionId=4&branchName=main&WT.mc_id=liteserver-github-jopapa)
 
 ## Why
 
@@ -174,7 +174,7 @@ CSS with Angular 2 is embedded thus even though BrowserSync detects the file cha
 1. Commit changes: `git commit -am 'Added a feature'`
 1. Run static code analysis and unit tests: `npm test`
 1. Push to the remote branch: `git push origin new-feature`
-1. Create a new [Pull Request](https://github.com/johnpapa/lite-server/pull/new/master)
+1. Create a new [Pull Request](https://github.com/johnpapa/lite-server/pull/new/main)
 
 ## License
 

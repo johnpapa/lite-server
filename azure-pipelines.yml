@@ -1,68 +1,67 @@
 trigger:
   branches:
     include:
-    - master
-    - greenkeeper/*
+      - main
 pr:
-- master
+  - main
 
 jobs:
-- job: Linux
-  pool:
-    # https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent
-    name: Hosted Ubuntu 1604
-    demands: npm
-  strategy:
-    matrix:
-      node_12_x:
-        node_version: 12.x
-      node_14_x:
-        node_version: 14.x
-  steps:
-  - task: NodeTool@0
-    displayName: 'Use $(node_version)'
-    inputs:
-      versionSpec: $(node_version)
+  - job: Linux
+    pool:
+      # https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent
+      name: Hosted Ubuntu 1604
+      demands: npm
+    strategy:
+      matrix:
+        node_12_x:
+          node_version: 12.x
+        node_14_x:
+          node_version: 14.x
+    steps:
+      - task: NodeTool@0
+        displayName: 'Use $(node_version)'
+        inputs:
+          versionSpec: $(node_version)
 
-  - task: Npm@1
-    displayName: 'Install dependencies'
-    inputs:
-      verbose: false
-      command: install
+      - task: Npm@1
+        displayName: 'Install dependencies'
+        inputs:
+          verbose: false
+          command: install
 
-  - task: Npm@1
-    displayName: 'Run tests'
-    inputs:
-      command: custom
-      verbose: false
-      customCommand: 'run test'
+      - task: Npm@1
+        displayName: 'Run tests'
+        inputs:
+          command: custom
+          verbose: false
+          customCommand: 'run test'
 
-- job: macOS
-  pool:
-    # https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent
-    name: Hosted macOS
-    demands: npm
-  strategy:
-    matrix:
-      node_12_x:
-        node_version: 12.x
-      node_14_x:
-        node_version: 14.x
-  steps:
-  - task: NodeTool@0
-    displayName: 'Use $(node_version)'
-    inputs:
-      versionSpec: $(node_version)
+  - job: macOS
+    pool:
+      # https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent
+      name: Hosted macOS
+      demands: npm
+    strategy:
+      matrix:
+        node_12_x:
+          node_version: 12.x
+        node_14_x:
+          node_version: 14.x
+    steps:
+      - task: NodeTool@0
+        displayName: 'Use $(node_version)'
+        inputs:
+          versionSpec: $(node_version)
 
-  - task: Npm@1
-    displayName: 'Install dependencies'
-    inputs:
-      verbose: false
-      command: install
+      - task: Npm@1
+        displayName: 'Install dependencies'
+        inputs:
+          verbose: false
+          command: install
 
-  - task: Npm@1
-    displayName: 'Run tests'
-    inputs:
-      command: custom
-      verbose: false
-      customCommand: 'run test'
+      - task: Npm@1
+        displayName: 'Run tests'
+        inputs:
+          command: custom
+          verbose: false
+          customCommand: 'run test'
