@@ -1,5 +1,7 @@
 # lite-server
 
+[![AI-Ready](https://img.shields.io/badge/AI--Ready-AGENTS.md-green?logo=github-copilot)](./AGENTS.md)
+
 Lightweight _development only_ node server that serves a web app, opens it in the browser, refreshes when html or javascript change, injects CSS changes using sockets, and has a fallback page when a route is not found.
 
 [![Dependency Status](https://david-dm.org/johnpapa/lite-server.svg)](https://david-dm.org/johnpapa/lite-server)
